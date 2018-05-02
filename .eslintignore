@@ -1,0 +1,14 @@
+# Forget about these:
+
+.nuxt/**
+node_modules/**
+**/node_modules/**
+dist
+build
+dist/
+build/
+
+# libs
+
+*.map
+
