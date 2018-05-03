@@ -2,6 +2,15 @@
 
 > Vue exercises for the win
 
+* Clone the repository
+
+* Install the dependencies: `npm install`
+
+* Open the app in your editor.
+
+* Launch it: `npm run dev`
+
+
 ## Build Setup
 
 ``` bash

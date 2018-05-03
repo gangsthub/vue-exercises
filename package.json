@@ -17,6 +17,7 @@
     "babel-polyfill": "^6.26.0",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
+    "getlorem": "^1.0.1",
     "node-sass": "^4.9.0",
     "nuxt": "^1.4.0",
     "sass-loader": "^7.0.1",

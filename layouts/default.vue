@@ -68,6 +68,8 @@ export default {
             drawer: true,
             items: [
                 { icon: 'apps', title: 'Home', to: '/' },
+                { icon: 'list', title: 'Exercise 1 - Blog', to: '/blog' },
+                { icon: 'tag_faces', title: 'Exercise 2 - Listing!', to: '/emojis' },
             ],
             miniVariant: false,
             right: true,

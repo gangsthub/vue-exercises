@@ -1,3 +1,3 @@
 <template>
-    <div>This is footer</div>
+    <div>The footer is left empty on porpouse</div>
 </template>
