@@ -10,6 +10,8 @@
 
 * Launch it: `npm run dev`
 
+* Open your browser in (localhost:300)[http://localhost:300]
+
 
 ## Build Setup
 
@@ -29,3 +31,11 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 ## Backpack
 
 We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
+
+## Components Library
+
+We are using [Vuetifyjs](https://vuetifyjs.com) wich is a [Material Design](http://material.io/) components library for Vue.
+
+## Animations
+
+For the animations I'm using vue's core own capabilities and CSS. I also added [Popmotion](https://popmotion.io) for some other more complex animations.

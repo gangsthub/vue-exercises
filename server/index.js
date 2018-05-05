@@ -1,16 +1,39 @@
 import express from 'express';
 import { Nuxt, Builder } from 'nuxt';
-
+import * as helmet from 'helmet';
+import { json, urlencoded } from 'body-parser';
+import * as cors from 'cors';
+import * as compression from 'compression';
 import api from './api';
 
 const app = express();
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3000;
+
+// security first
+app.use(helmet({
+    dnsPrefetchControl: {
+        allow: true
+    }
+}));
+
+// Enabling CORS (before routes)
+app.use(cors());
+
+// enabling gzip before routes
+app.use(compression());
 
 app.set('port', port);
 
 // Import API Routes
 app.use('/api', api);
+
+// handle json responses
+app.use(json());
+// support encoded bodies
+app.use(urlencoded({
+    extended: true
+}));
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js');

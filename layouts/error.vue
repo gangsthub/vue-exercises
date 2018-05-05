@@ -23,7 +23,7 @@ export default {
                 {
                     rel: 'stylesheet',
                     type: 'text/css',
-                    href: 'https://fonts.googleapis.com/css?family=Montserrat:900s&text=ERROR%201234567890',
+                    href: 'https://fonts.googleapis.com/css?family=Montserrat:900s&text=EORTypeor%201234567890',
                     hid: 'Montserrrat'
                 }
             ]

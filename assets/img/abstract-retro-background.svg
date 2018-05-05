@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="841.9" height="595.3">
+	<path fill="#292E32" d="M0 0h841.9v595.3H0z" />
+	<radialGradient id="a" cx="613.179" cy="-186.122" r="106.495" gradientTransform="matrix(.1589 0 0 2.5529 515.72 772.796)"
+	    gradientUnits="userSpaceOnUse">
+		<stop offset="0" stop-color="#0c1015" />
+		<stop offset=".309" stop-color="#0e1217" stop-opacity=".691" />
+		<stop offset=".544" stop-color="#14181c" stop-opacity=".456" />
+		<stop offset=".753" stop-color="#1d2125" stop-opacity=".246" />
+		<stop offset=".948" stop-color="#262b2f" stop-opacity=".052" />
+		<stop offset="1" stop-color="#292e32" stop-opacity="0" />
+	</radialGradient>
+	<ellipse fill="url(#a)" cx="613.2" cy="297.6" rx="16.9" ry="271.9" />
+	<radialGradient id="b" cx="-1805.736" cy="-186.122" r="106.495" gradientTransform="matrix(.1589 0 0 2.5529 515.72 772.796)"
+	    gradientUnits="userSpaceOnUse">
+		<stop offset="0" stop-color="#0c1015" />
+		<stop offset=".309" stop-color="#0e1217" stop-opacity=".691" />
+		<stop offset=".544" stop-color="#14181c" stop-opacity=".456" />
+		<stop offset=".753" stop-color="#1d2125" stop-opacity=".246" />
+		<stop offset=".948" stop-color="#262b2f" stop-opacity=".052" />
+		<stop offset="1" stop-color="#292e32" stop-opacity="0" />
+	</radialGradient>
+	<ellipse fill="url(#b)" cx="228.7" cy="297.6" rx="16.9" ry="271.9" />
+	<path fill="#FDDD00" d="M228.7 25.8h384.5v543.7H228.7z" />
+	<path fill="#924299" d="M309.462 318.117l117.45-117.45 9.758 9.759-117.45 117.449z" />
+	<path fill="#FFF" d="M228.7 561.9v7.6h11.9l320.8-320.8-9.8-9.8z" />
+	<circle fill="#924299" cx="453.4" cy="62.2" r="16.8" />
+	<path fill="#924299" d="M540.6 552.7c-9.3 0-16.8 7.5-16.8 16.8h33.5c.1-9.2-7.4-16.8-16.7-16.8zM477.1 266.8l136.1-136V80.5L452 241.7zM367.1 378.4l-16.8-16.8-121.6 121.5v33.7z"
+	/>
+	<path fill="#EF4E95" d="M369.7 158.8l-25.1-25.1-115.9 115.9v50.2zM358.4 569.5l173.7-173.7-25.1-25.1-198.8 198.8z" />
+	<path fill="#FFF" d="M613.2 473.6L556 530.8l25.1 25.2 32.1-32.1z" />
+	<path fill="#EF4E95" d="M491.1 156L613.2 33.9v-8.1h-11.4L481.3 146.2z" />
+	<path fill="#924299" d="M408.1 43.1l-9.8-9.7L228.7 203v19.5z" />
+	<path fill="#FFF" d="M228.7 76.7v19.5l70.5-70.4h-19.5zM272.1 374.9l-9.7-9.7-33.7 33.6v19.5z" />
+	<path fill="#924299" d="M516.5 46.6L228.7 334.3v9.1L521 51.1z" />
+	<path fill="#EF4E95" d="M367.1 25.8h-9L245.6 138.3l4.5 4.5z" />
+	<path fill="#924299" d="M400.2 556l213-213v-9L395.7 551.5z" />
+	<path fill="#EF4E95" d="M588.3 445l-9.7-9.8-134.3 134.3h19.5zM245.5 70.2c0-9.3-7.5-16.8-16.8-16.8v33.5c9.3 0 16.8-7.5 16.8-16.7z"
+	/>
+	<circle fill="#EF4E95" cx="575.7" cy="169" r="13.4" />
+	<circle fill="#924299" cx="259" cy="271.1" r="13.4" />
+	<circle fill="#EF4E95" cx="298.6" cy="444.7" r="13.4" />
+	<circle fill="#924299" cx="395.7" cy="482.2" r="16.8" />
+	<circle fill="#924299" cx="511.4" cy="503.2" r="8.4" />
+	<path fill="#924299" d="M309.456 209.82l117.45-117.449 9.758 9.758-117.45 117.45zM613.2 256.5l-88.7 88.7 9.7 9.7 79-78.9z"
+	/>
+	<circle fill="#FFF" cx="420.9" cy="297.6" r="133.4" />
+	<circle fill="#EF4E95" cx="464.1" cy="172.7" r="14.7" />
+	<circle fill="#FFF" cx="282.2" cy="355.1" r="9" />
+</svg>
