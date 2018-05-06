@@ -9,6 +9,6 @@ Vue.use(Vuetify, {
         primary: colors.purple.base,
         secondary: colors.grey.darken1,
         accent: colors.shades.black,
-        error: colors.red.accent3
+        error: colors.red.accent3,
     }
 });

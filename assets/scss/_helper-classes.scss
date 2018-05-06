@@ -8,3 +8,11 @@
 .prel {
     position: relative;
 }
+
+// moar colors
+.success {
+    background-color: #00C853;
+    &--text {
+        color: #00C853;
+    }
+}

@@ -9,18 +9,16 @@
         <div class="title">Hello world!</div>
 
         <div class="body-1">
-            <span>
-                Open the app in your <b>editor</b> at <code>pages/index.vue</code>
-                and uncomment the code below...
-            </span>
-            <v-icon class="translucent">keyboard_arrow_down</v-icon>
+            <span v-html="hustonHtml">Nothing here</span>
 
-            <span>If you have this in a second screen, you will see how fast the</span>&nbsp;
-            <a href="https://nuxtjs.org/guide#features" target="blank" rel="noopener noreferer">HMR</a>&nbsp;
+            <!-- 🚀 Uncomment the code below ⬇ -->
+
+            <!-- <span>If you have this in a second screen, you will see how fast the</span>
+            &nbsp;<a href="https://nuxtjs.org/guide#features" target="blank" rel="noopener noreferer">HMR</a>&nbsp;
             <span>works!</span>
-            <p class="about-coding-style">
-                Another thing: I have respected 120 chars per line. You can add the rule in your editor too 😋.
-            </p>
+            <p class="about-coding-style"> Another thing: I have respected 120 chars per line.
+                You can add the rule in your editor too 😋.</p>
+            <p><v-icon class="translucent success--text headline">check</v-icon></p> -->
 
 
         </div>
@@ -37,6 +35,12 @@ export default {
             title: 'Home',
             description: 'This is the interactive Vue course were in wich you do the own course by coding with Vue.js'
         };
+    },
+    data() {
+        return {
+            hustonHtml: 'Open the app in your <b>editor</b> at <code>pages/index.vue</code>' +
+                'and uncomment the code below...<br><br><b>Hint:</b> Search for a space rocket in the code!'
+        }
     },
     components: {
         TheSatelite
