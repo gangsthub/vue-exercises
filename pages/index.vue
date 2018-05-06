@@ -14,14 +14,14 @@
                 and uncomment the code below...
             </span>
             <v-icon class="translucent">keyboard_arrow_down</v-icon>
-            <!--
-                <span>If you have this in a second screen, you will see how fast the</span>&nbsp;
-                <a href="https://nuxtjs.org/guide#features" target="blank" rel="noopener noreferer">HMR</a>&nbsp;
-                <span>works!</span>
-                <p>
-                    Another thing: I have respected 120 chars per line. You can add the rule in your editor too 😋.
-                </p>
-            -->
+
+            <span>If you have this in a second screen, you will see how fast the</span>&nbsp;
+            <a href="https://nuxtjs.org/guide#features" target="blank" rel="noopener noreferer">HMR</a>&nbsp;
+            <span>works!</span>
+            <p class="about-coding-style">
+                Another thing: I have respected 120 chars per line. You can add the rule in your editor too 😋.
+            </p>
+
 
         </div>
     </section>
@@ -29,7 +29,7 @@
 
 <script>
 
-import TheSatelite from '~/components/Satelite';
+import TheSatelite from '~/components/Satelite.vue';
 
 export default {
     head() {

@@ -7,6 +7,7 @@
                         v-for="post in posts"
                         :key="post.id"
                         md6
+                        class="post"
                     >
                         <v-card
                             nuxt

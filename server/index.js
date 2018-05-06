@@ -1,9 +1,9 @@
 import express from 'express';
 import { Nuxt, Builder } from 'nuxt';
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 import { json, urlencoded } from 'body-parser';
-import * as cors from 'cors';
-import * as compression from 'compression';
+import cors from 'cors';
+import compression from 'compression';
 import api from './api';
 
 const app = express();

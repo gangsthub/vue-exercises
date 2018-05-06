@@ -4,7 +4,7 @@ module.exports = {
   env: {
     browser: true,
     serviceworker: true,
-    node: true
+    node: true,
   },
   extends: ['standard'],
   // required to lint *.vue files
