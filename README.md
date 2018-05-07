@@ -1,3 +1,7 @@
+<p align="center">
+  <img style="display:block; margin:auto" src="cover.jpg">
+</p>
+
 # vue-exercises
 
 > Vue exercises made within a Nuxt.js application. 4 Exercises for the astronaut cadets of Erni!
