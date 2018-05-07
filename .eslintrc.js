@@ -25,7 +25,8 @@ module.exports = {
       "functions": "ignore"
     }],
     "space-before-function-paren": ["error", {
-      "asyncArrow": "always"
+      "asyncArrow": "always",
+      "named": "never",
     }],
     "no-debugger": "error",
   },

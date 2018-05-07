@@ -1,20 +1,20 @@
 <template>
     <div>
-        <!-- TO BE DELETED
-
-            Now is your turn!
-
-                - Replicate the behaviour of the blog (pages/blog/index.vue) to list the emojis from the server ^__^
-                - You can use vuetify or plain html here.
-
-            **Hint**: the endpoint is `/api/emojis`
-
-        -->
         There's nothing here yet (delete me)
+        <!-- 🚀 Insert it here ⬇. And delete that ↖ -->
     </div>
 </template>
 
 <script>
+import setHustonText from '~/mixins/setHustonText';
+import { hustonText } from './hustonText'
 export default {
+    name: 'emojis',
+    data() {
+        return {
+            hustonHtml: hustonText
+        }
+    },
+    mixins: [ setHustonText ],
 }
 </script>

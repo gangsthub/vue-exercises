@@ -2,3 +2,7 @@
 .list__tile__action {
     cursor: pointer;
 }
+.navigation-drawer--close.navigation-drawer--right {
+    // important: actually disappear!! so intersection observer gets called
+    transform: translateX(102%) !important; // inlined
+}

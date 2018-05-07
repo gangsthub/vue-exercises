@@ -10,9 +10,25 @@
 }
 
 // moar colors
-.success {
-    background-color: #00C853;
-    &--text {
-        color: #00C853;
+$MOAR_COLORS: (
+    success: #00C853,
+    // grey: #eeeeee,
+);
+
+@mixin colorFromCollection() {
+    @each $key, $value in $MOAR_COLORS {
+        .#{ $key } {
+            background-color: $value;
+            &--text {
+                color: $value;
+            }
+        }
     }
+}
+
+@include colorFromCollection();
+
+// typography
+.bold {
+    font-weight: bold;
 }

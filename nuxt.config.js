@@ -90,6 +90,10 @@ module.exports = {
     },
     plugins: [
         '~/plugins/vuetify.js', // can't have the no-ssr, sorry
+        {
+            src: '~/plugins/intersection-observer.js',
+            ssr: false
+        },
     ],
     modules: [
         '@nuxtjs/axios',

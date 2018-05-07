@@ -9,6 +9,6 @@ dist/
 build/
 
 # libs
-
+plugins/intersection-observer-polyfill.js
 *.map
 

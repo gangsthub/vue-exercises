@@ -28,12 +28,20 @@
 <script>
 
 import TheSatelite from '~/components/Satelite.vue';
+import setHustonText from '~/mixins/setHustonText';
 
 export default {
     head() {
         return {
             title: 'Home',
-            description: 'This is the interactive Vue course were in wich you do the own course by coding with Vue.js'
+            meta: [
+                {
+                    name: 'description',
+                    content: 'This is the interactive Vue course were in wich you do the own course by ' +
+                        'coding with Vue.js',
+                    hid: 'description'
+                }
+            ]
         };
     },
     data() {
@@ -42,6 +50,7 @@ export default {
                 'and uncomment the code below...<br><br><b>Hint:</b> Search for a space rocket in the code!'
         }
     },
+    mixins: [ setHustonText ],
     components: {
         TheSatelite
     }

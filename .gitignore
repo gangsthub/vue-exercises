@@ -1,5 +1,6 @@
 # editor
 .launch
+vue-exercises.code-workspace
 
 # dependencies
 node_modules

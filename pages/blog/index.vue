@@ -9,6 +9,7 @@
                         md6
                         class="post"
                     >
+                        <!-- BTW, the posts are actual links -->
                         <v-card
                             nuxt
                             hover
@@ -21,15 +22,7 @@
                                 <div class="headline primary--text">{{ post.title }}</div>
                             </v-card-title>
                             <v-card-text>
-                                <!-- TO BE DELETED
-
-                                    Now is your turn!
-
-                                        - Add an element with the class `body-1` that contains the `post.extract` here
-
-                                    **Hint**: should be similar markup as the title
-
-                                -->
+                                <!-- 🚀 Insert it here ⬇ -->
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -40,6 +33,8 @@
 </template>
 
 <script>
+import setHustonText from '~/mixins/setHustonText';
+
 export default {
     name: 'Blog',
     head () {
@@ -49,7 +44,11 @@ export default {
     },
     data() {
         return {
-            posts: []
+            posts: [],
+            hustonHtml: 'Now is your turn!<br>' +
+                        '<br>- Add an element with the class <code>body-1</code> that contains ' +
+                        'the <code>post.extract</code> property were our rocket is<br>' +
+                        '<br><b>Hint</b>: should be similar markup as the title'
         }
     },
     asyncData ({ app }) {
@@ -57,6 +56,7 @@ export default {
             return { posts: data };
         })
     },
+    mixins: [ setHustonText ],
 }
 </script>
 

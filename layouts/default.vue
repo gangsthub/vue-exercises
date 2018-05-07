@@ -35,7 +35,7 @@
             <v-spacer></v-spacer>
             <v-btn
                 icon
-                @click.stop="rightDrawer = !rightDrawer"
+                @click="callToHuston(true)"
             >
                 <v-icon>menu</v-icon>
             </v-btn>
@@ -48,9 +48,11 @@
         <v-navigation-drawer
             temporary
             :right="true"
-            v-model="rightDrawer"
+            :value="hustonOpen"
+            v-observe-visibility="onVisibilityChanged"
             fixed
         >
+            <huston-wrapper></huston-wrapper>
         </v-navigation-drawer>
         <v-footer app>
             <my-footer/>
@@ -60,6 +62,8 @@
 
 <script>
 import MyFooter from '~/components/Footer';
+import HustonWrapper from '~/components/HustonWrapper';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
     data() {
@@ -67,17 +71,28 @@ export default {
             clipped: false,
             drawer: true,
             items: [
-                { icon: 'apps', title: 'Home', to: '/' },
-                { icon: 'list', title: 'Exercise 1 - Blog', to: '/blog' },
-                { icon: 'tag_faces', title: 'Exercise 2 - Listing!', to: '/emojis' },
+                { icon: 'apps', title: 'Exercise 1 - Home', to: '/' },
+                { icon: 'list', title: 'Exercise 2 - Blog', to: '/blog' },
+                { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/emojis' },
             ],
             miniVariant: false,
             right: true,
-            rightDrawer: false,
             title: 'Vue exercises'
         };
     },
+    computed: {
+        ...mapGetters(['hustonOpen'])
+    },
+    methods: {
+        ...mapActions(['callToHuston']),
+        onVisibilityChanged(isVisible) {
+            if (isVisible !== this.hustonOpen) {
+                this.callToHuston(isVisible);
+            }
+        },
+    },
     components: {
+        HustonWrapper,
         MyFooter
     }
 };
