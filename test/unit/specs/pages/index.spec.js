@@ -17,6 +17,6 @@ describe('Home /', () => {
         const wrapper = mount(Home, {
             localVue: localVue,
         });
-        expect(wrapper.find('.title').exists()).toBe(true);
+        expect(wrapper.find('h1.subheading').exists()).toBe(true);
     });
 });

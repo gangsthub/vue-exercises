@@ -1,13 +1,13 @@
 <template>
     <section class="container white">
         <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image"></div>
-        <h3 class="subheading"><a
+        <h1 class="subheading"><a
             href="https://github.com/gangsthub/vue-exercises"
             target="_blank"
             rel="noopener noreferer"
         >
             https://github.com/gangsthub/vue-exercises
-        </a></h3>
+        </a></h1>
         <p class="subheading my-4">
             1️⃣ Go to the first exercise:
             <nuxt-link
