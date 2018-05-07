@@ -73,9 +73,6 @@ export default {
             drawer: true,
             items: [
                 { icon: 'home', title: 'Mission Control (Home)', to: '/' },
-                { icon: 'apps', title: 'Exercise 1 - Hello world', to: '/hello-world' },
-                { icon: 'list', title: 'Exercise 2 - Blog', to: '/blog' },
-                { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/emojis' },
             ],
             miniVariant: false,
             right: true,
