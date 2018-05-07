@@ -1,7 +1,9 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg"
-        :width="width"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        enable-background="new 0 0 600 400"
         viewBox="0 0 600 400"
+        :width="width"
         class="satellite"
     >
   <defs>

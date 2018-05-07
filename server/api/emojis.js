@@ -14,6 +14,7 @@ class Emoji {
 
 // Mock posts
 const emojis = [
+    // no id 0 left on purpouse
     new Emoji(1, '😀'),
     new Emoji(2, '😁'),
     new Emoji(3, '😂'),

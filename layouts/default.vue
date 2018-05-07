@@ -73,9 +73,14 @@ export default {
             drawer: true,
             items: [
                 { icon: 'home', title: 'Mission Control (Home)', to: '/' },
-                { icon: 'apps', title: 'Exercise 1 - Hello world', to: '/hello-world' },
-                { icon: 'list', title: 'Exercise 2 - Blog', to: '/blog' },
-                { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/emojis' },
+                { icon: 'apps', title: 'Exercise 1 - Hello world', to: '/exercise-1-hello-world' },
+                { icon: 'list', title: 'Exercise 2 - Blog', to: '/exercise-2-blog' },
+                { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/exercise-3-emojis' },
+                {
+                    icon: 'trending_up',
+                    title: 'Exercise 4 - Vuex and computed properties!',
+                    to: '/exercise-4-vuex-and-computed-properties'
+                },
             ],
             miniVariant: false,
             right: true,
@@ -88,8 +93,12 @@ export default {
     methods: {
         ...mapActions(['callToHuston']),
         onVisibilityChanged(isVisible) {
-            if (isVisible !== this.hustonOpen) {
-                this.callToHuston(isVisible);
+            if (process.browser) {
+
+                if (isVisible !== this.hustonOpen) {
+                    this.callToHuston(isVisible);
+                }
+
             }
         },
     },

@@ -26,15 +26,17 @@
 </template>
 
 <script>
-
 import TheSatelite from '~/components/Satelite.vue';
+
+import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
+import callingHuston from '~/mixins/callingHuston';
 
 export default {
     name: 'Hello-world',
     head() {
         return {
-            title: 'Home',
+            title: 'Hello world',
             meta: [
                 {
                     name: 'description',
@@ -46,11 +48,10 @@ export default {
     },
     data() {
         return {
-            hustonHtml: 'Open the app in your <b>editor</b> at <code>pages/index.vue</code>' +
-                'and uncomment the code below...<br><br><b>Hint:</b> Search for a space rocket in the code!'
+            hustonHtml: hustonText
         }
     },
-    mixins: [ setHustonText ],
+    mixins: [ setHustonText, callingHuston ],
     components: {
         TheSatelite
     }

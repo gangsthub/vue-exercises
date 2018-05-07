@@ -1,6 +1,5 @@
 <template>
-    <div class="w80p">
-        <div class="display-2 mb-3">{{ post.title }}</div>
+    <div class="w80p pa-4">
         <v-list class="transparent">
             <v-list-tile avatar>
               <v-list-tile-avatar>
@@ -13,12 +12,14 @@
               </v-list-tile-content>
             </v-list-tile>
         </v-list>
+        <div class="display-2 mb-3">{{ post.title }}</div>
         <div class="body-1 respect-line-breaks mt-3">{{ post.content }}</div>
         <!-- 🚀 There is no exercise to be done in this page, go to emojis! -->
     </div>
 </template>
 
 <script>
+
 import setHustonText from '~/mixins/setHustonText';
 
 export default {
@@ -48,7 +49,7 @@ export default {
                 error({ statusCode: 404, message: 'Post not found' })
             })
     },
-    mixins: [ setHustonText ],
+    mixins: [ setHustonText, /* not calling huston here, but setting the text */ ],
 }
 </script>
 

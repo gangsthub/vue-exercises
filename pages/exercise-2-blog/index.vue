@@ -14,7 +14,7 @@
                             nuxt
                             hover
                             :to="{
-                                path: `/blog/${ post.id }`,
+                                path: `/exercise-2-blog/${ post.id }`,
                                 param: post.id
                             }"
                         >
@@ -33,7 +33,9 @@
 </template>
 
 <script>
+import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
+import callingHuston from '~/mixins/callingHuston';
 
 export default {
     name: 'Blog',
@@ -45,10 +47,7 @@ export default {
     data() {
         return {
             posts: [],
-            hustonHtml: 'Now is your turn!<br>' +
-                        '<br>- Add an element with the class <code>body-1</code> that contains ' +
-                        'the <code>post.extract</code> property were our rocket is<br>' +
-                        '<br><b>Hint</b>: should be similar markup as the title'
+            hustonHtml: hustonText
         }
     },
     asyncData ({ app }) {
@@ -56,7 +55,7 @@ export default {
             return { posts: data };
         })
     },
-    mixins: [ setHustonText ],
+    mixins: [ setHustonText, callingHuston ],
 }
 </script>
 

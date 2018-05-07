@@ -6,15 +6,22 @@
 </template>
 
 <script>
+import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
-import { hustonText } from './hustonText'
+import callingHuston from '~/mixins/callingHuston';
+
 export default {
     name: 'emojis',
+    head () {
+        return {
+            title: 'This are my emojis'
+        }
+    },
     data() {
         return {
             hustonHtml: hustonText
         }
     },
-    mixins: [ setHustonText ],
+    mixins: [ setHustonText, callingHuston ],
 }
 </script>

@@ -6,7 +6,7 @@ module.exports = {
     ** Headers of the page
     */
     head: {
-        title: 'Vue Exercises',
+        titleTemplate: '%s – Vue Exercises',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -100,5 +100,5 @@ module.exports = {
     ],
     axios: {
         baseURL: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
-    }
+    },
 };

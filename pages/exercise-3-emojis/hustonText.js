@@ -1,12 +1,15 @@
+// hiding this here to leave the page cleaner for the exercises
+
 export const hustonText = 'Now is your turn!' +
-    '<br><br>- Replicate the behaviour of the blog <code>pages/blog/index.vue</code>' +
-    'to list some emojis from the server ^___^.' +
+    '<br><br>- Replicate the behaviour of the blog <code>pages/exercise-2-blog/index.vue</code> ' +
+    'to list some emojis from the server 😋.' +
     '<br><br>- You can use ' +
     '<a href="https://vuetifyjs.com/en/components/cards" target="blank" rel="noopener noreferer">' +
-    '<em>Vuetify</em></a> ' +
+    '<em>Vuetify</em></a> (wich is the component library based on Material Design that we are using) ' +
     'or plain HTML here.' +
     '<br><br><b>Hint</b>: the endpoint is <code>/api/emojis</code>.' +
-    '<br><br><b>Extra points</b>: Leave only the <b>even</b> ones! (using <code>v-if</code>): ' +
+    '<br><br><b>Extra points</b>: Leave only the <b>even</b> ones! (using the <code>v-if</code> directive , <code>Array.filter()</code>, ' +
+    '<code>Array.reduce()</code>, or anything you come up with): Like this:<br><br>' +
     '<span class="grey--text">1</span> ' +
     '<span class="bold">2</span> ' +
     '<span class="grey--text">3</span> ' +
