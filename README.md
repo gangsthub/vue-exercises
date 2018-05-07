@@ -6,17 +6,21 @@
 
 > Vue exercises made within a Nuxt.js application. 4 Exercises for the astronaut cadets of Erni!
 
-* Clone the repository
+* Clone the repository wherever you want: `git clone https://github.com/gangsthub/vue-exercises.git`
 
-* Install the dependencies: `npm install`
+* Install the dependencies: `npm install` within the _vue-exercises_ folder.
 
 * Open the app in your editor.
 
-* Launch it: `npm run dev`
+  - I personally recommend [VS Code](https://code.visualstudio.com/download) with [Vetur Extension](https://marketplace.visualstudio.com/items?itemName=octref.vetur) installed.
+
+* Launch it: `npm run dev` 💪🏾🚀🛫
 
 * Open your browser in (localhost:300)[http://localhost:300]
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+* Follow the steps supplied in the app's homepage.
+
+For detailed explanation on how these things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
 ## Components Library
 
