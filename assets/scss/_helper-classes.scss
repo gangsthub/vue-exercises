@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.ibm {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 // moar colors
 $MOAR_COLORS: (
     success: #00C853,
@@ -31,4 +36,9 @@ $MOAR_COLORS: (
 // typography
 .bold {
     font-weight: bold;
+}
+
+// cursors
+.c-p {
+    cursor: pointer;
 }

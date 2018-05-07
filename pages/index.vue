@@ -1,36 +1,32 @@
 <template>
-    <section class="container">
-        <div class="satelite-wrapper prel">
-            <!-- For the purpouse of a silly animation I added dragging capabilities to this satelite illustration.
-            You can omit this comment -->
-            <the-satelite></the-satelite>
-        </div>
-
-        <div class="title">Hello world!</div>
-
-        <div class="body-1">
-            <span v-html="hustonHtml">Nothing here</span>
-
-            <!-- 🚀 Uncomment the code below ⬇ -->
-
-            <!-- <span>If you have this in a second screen, you will see how fast the</span>
-            &nbsp;<a href="https://nuxtjs.org/guide#features" target="blank" rel="noopener noreferer">HMR</a>&nbsp;
-            <span>works!</span>
-            <p class="about-coding-style"> Another thing: I have respected 120 chars per line.
-                You can add the rule in your editor too 😋.</p>
-            <p><v-icon class="translucent success--text headline">check</v-icon></p> -->
-
-
-        </div>
+    <section class="container white">
+        <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image"></div>
+        <h3 class="subheading"><a
+            href="https://github.com/gangsthub/vue-exercises"
+            target="_blank"
+            rel="noopener noreferer"
+        >
+            https://github.com/gangsthub/vue-exercises
+        </a></h3>
+        <p class="subheading my-4">
+            1️⃣ Go to the first exercise:
+            <nuxt-link
+                tag="span"
+                class="ibm subheading c-p primary--text"
+                :to="{
+                    path: `/hello-world`
+                }"
+            >/hello-world</nuxt-link>
+        </p>
     </section>
 </template>
 
 <script>
 
-import TheSatelite from '~/components/Satelite.vue';
 import setHustonText from '~/mixins/setHustonText';
 
 export default {
+    name: 'Home',
     head() {
         return {
             title: 'Home',
@@ -46,14 +42,10 @@ export default {
     },
     data() {
         return {
-            hustonHtml: 'Open the app in your <b>editor</b> at <code>pages/index.vue</code>' +
-                'and uncomment the code below...<br><br><b>Hint:</b> Search for a space rocket in the code!'
+            hustonHtml: 'Nothing to see here, go to the first exercise'
         }
     },
     mixins: [ setHustonText ],
-    components: {
-        TheSatelite
-    }
 };
 </script>
 

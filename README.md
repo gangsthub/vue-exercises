@@ -1,5 +1,5 @@
 <p align="center">
-  <img style="display:block; margin:auto" src="cover.jpg">
+  <img style="display:block; margin:auto" src="static/images/cover.jpg">
 </p>
 
 # vue-exercises
@@ -39,3 +39,8 @@ For the animations I'm using vue's core own capabilities and CSS. I also added [
   - [Roboto](https://fonts.google.com/specimen/Roboto)
   - [Montserrat](https://github.com/JulietaUla/Montserrat)
   - Icon Fonts: [Material Icons](http://material.io/icons)
+
+## Thanks
+
+- Thanks to Erni for letting us do this.
+- Thanks to the contributors/organizers: Ana Jaime, Jorge Artieda, Bernat Martinez

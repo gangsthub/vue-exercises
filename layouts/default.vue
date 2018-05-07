@@ -66,12 +66,14 @@ import HustonWrapper from '~/components/HustonWrapper';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
+    transition: 'page',
     data() {
         return {
             clipped: false,
             drawer: true,
             items: [
-                { icon: 'apps', title: 'Exercise 1 - Home', to: '/' },
+                { icon: 'home', title: 'Mission Control (Home)', to: '/' },
+                { icon: 'apps', title: 'Exercise 1 - Hello world', to: '/hello-world' },
                 { icon: 'list', title: 'Exercise 2 - Blog', to: '/blog' },
                 { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/emojis' },
             ],
@@ -97,3 +99,12 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+.page-enter, .page-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
