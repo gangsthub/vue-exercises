@@ -16,7 +16,7 @@
 
 * Launch it: `npm run dev` 💪🏾🚀🛫
 
-* Open your browser in (localhost:300)[http://localhost:300]
+* Open your browser in (localhost:3000)[http://localhost:3000]
 
 * Follow the steps supplied in the app's homepage.
 
