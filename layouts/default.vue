@@ -33,12 +33,17 @@
             <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn
-                icon
-                @click="callToHuston(true)"
-            >
-                <v-icon>menu</v-icon>
-            </v-btn>
+             <v-tooltip left>
+                 <v-btn
+                    icon
+                    slot="activator"
+                    @click="callToHuston(true)"
+                    color="info"
+                >
+                    <v-icon>live_help</v-icon>
+                </v-btn>
+                <span>This is Huston</span>
+            </v-tooltip>
         </v-toolbar>
         <v-content>
             <v-container>

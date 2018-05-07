@@ -1,23 +1,32 @@
 <template>
     <section class="container white">
         <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image"></div>
-        <h3 class="subheading"><a
-            href="https://github.com/gangsthub/vue-exercises"
-            target="_blank"
-            rel="noopener noreferer"
-        >
-            https://github.com/gangsthub/vue-exercises
-        </a></h3>
-        <p class="subheading my-4">
-            1️⃣ Go to the first exercise:
-            <nuxt-link
-                tag="span"
-                class="ibm subheading c-p primary--text"
-                :to="{
-                    path: `/hello-world`
-                }"
-            >/hello-world</nuxt-link>
-        </p>
+        <div class="pl-3">
+            <h3 class="subheading">Repo: <a
+                href="https://github.com/gangsthub/vue-exercises"
+                target="_blank"
+                rel="noopener noreferer"
+            >
+                https://github.com/gangsthub/vue-exercises
+            </a></h3>
+            <p class="subheading mt-4">
+                1️⃣ Go to the first exercise:
+                <nuxt-link
+                    tag="span"
+                    class="ibm subheading c-p primary--text"
+                    :to="{
+                        path: `/exercise-1-hello-world`
+                    }"
+                >/exercise-1-hello-world</nuxt-link>
+            </p>
+            <p class="subheading">
+                2️⃣ Remember that you have the "help" available on the
+                top right corner for every exercise.
+            </p>
+            <p class="subheading">
+                ️3️⃣ Enjoy!
+            </p>
+        </div>
     </section>
 </template>
 

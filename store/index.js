@@ -6,6 +6,7 @@ const store = () => {
         state: {
             missionText: '',
             hustonOpen: false,
+            soloMissionPages: [],
         },
         getters: {
             hustonText(state) {
@@ -13,6 +14,9 @@ const store = () => {
             },
             hustonOpen(state) {
                 return state.hustonOpen;
+            },
+            soloMissionPages(state) {
+                return state.soloMissionPages;
             }
         },
         mutations: {
@@ -22,6 +26,11 @@ const store = () => {
             CALL_TO_HUSTON(state, val) {
                 state.hustonOpen = !!val;
             },
+            ADD_TO_WONT_SHOW_AGAIN_PAGES(state, page) {
+                if (typeof page === 'string' && !state.soloMissionPages.includes(page)) {
+                    state.soloMissionPages.push(page);
+                }
+            }
         },
         actions: {
             updateHustonText({ commit }, text) {
@@ -29,6 +38,9 @@ const store = () => {
             },
             callToHuston({ commit }, val) {
                 commit('CALL_TO_HUSTON', val);
+            },
+            addToWontShowAgainPages({ commit }, page) {
+                commit('ADD_TO_WONT_SHOW_AGAIN_PAGES', page);
             }
         }
     });
