@@ -94,6 +94,10 @@ module.exports = {
             src: '~/plugins/intersection-observer.js',
             ssr: false
         },
+        {
+            src: '~/plugins/persisted-state.js',
+            ssr: false
+        }
     ],
     modules: [
         '@nuxtjs/axios',

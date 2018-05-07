@@ -42,7 +42,7 @@ const store = () => {
             addToWontShowAgainPages({ commit }, page) {
                 commit('ADD_TO_WONT_SHOW_AGAIN_PAGES', page);
             }
-        }
+        },
     });
 };
 

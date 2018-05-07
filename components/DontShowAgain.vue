@@ -1,7 +1,7 @@
 <template>
     <div class="px-3">
         <v-btn
-            v-if="!thisPageIsExluded"
+            v-if="!thisPageIsExluded && $nuxt.$router.name !== 'index'"
             @click="dontShowAgain"
             key="button"
         >

@@ -20,7 +20,16 @@
                 >/exercise-1-hello-world</nuxt-link>
             </p>
             <p class="subheading">
-                2️⃣ Remember that you have the "help" available on the
+                2️⃣ Remember that you have the "help button"
+                <v-btn
+                    icon
+                    slot="activator"
+                    @click="callToHuston(true)"
+                    color="info"
+                >
+                    <v-icon>live_help</v-icon>
+                </v-btn>
+                available on the
                 top right corner for every exercise.
             </p>
             <p class="subheading">
@@ -31,6 +40,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 
 import setHustonText from '~/mixins/setHustonText';
 
@@ -51,10 +61,13 @@ export default {
     },
     data() {
         return {
-            hustonHtml: 'Nothing to see here, go to the first exercise'
+            hustonHtml: 'Nothing to see here, go to the first exercise! :)'
         }
     },
     mixins: [ setHustonText ],
+    methods: {
+        ...mapActions(['callToHuston']),
+    }
 };
 </script>
 
