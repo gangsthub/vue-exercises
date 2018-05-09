@@ -6,10 +6,9 @@
             <the-satelite></the-satelite>
         </div>
 
-        <div class="title">Hello world!</div>
+        <div class="title">{{ title }}</div>
 
         <div class="body-1">
-            <span v-html="hustonHtml">Nothing here</span>
 
             <!-- 🚀 Uncomment the code below ⬇ -->
 
@@ -36,7 +35,7 @@ export default {
     name: 'Hello-world',
     head() {
         return {
-            title: 'Hello world',
+            title: `${ this.title }`,
             meta: [
                 {
                     name: 'description',
@@ -48,6 +47,7 @@ export default {
     },
     data() {
         return {
+            title: 'Hello, ...world?',
             hustonHtml: hustonText
         }
     },

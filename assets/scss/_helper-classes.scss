@@ -43,6 +43,12 @@ $MOAR_COLORS: (
     font-weight: bold;
 }
 
+// text
+.break {
+    word-break: break-all;
+}
+
+
 // cursors
 .c-p {
     cursor: pointer;

@@ -3,7 +3,6 @@
         <v-btn
             v-if="!thisPageIsExluded && $nuxt.$router.name !== 'index'"
             @click="dontShowAgain"
-            key="button"
         >
             Dont show again
         </v-btn>

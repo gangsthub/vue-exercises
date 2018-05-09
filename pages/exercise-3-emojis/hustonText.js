@@ -1,4 +1,6 @@
 // hiding this here to leave the page cleaner for the exercises
+// but you dont NEED to put text in Vue or Nuxt like this.
+// Just making use of Javascript to leave cleaner the exercise page
 
 export const hustonText = 'Now is your turn!' +
     '<br><br>- Replicate the behaviour of the blog <code>pages/exercise-2-blog/index.vue</code> ' +

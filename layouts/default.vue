@@ -83,8 +83,8 @@ export default {
                 { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/exercise-3-emojis' },
                 {
                     icon: 'trending_up',
-                    title: 'Exercise 4 - Vuex and computed properties!',
-                    to: '/exercise-4-vuex-and-computed-properties'
+                    title: 'Exercise 4 - Counters!',
+                    to: '/exercise-4-counters'
                 },
             ],
             miniVariant: false,

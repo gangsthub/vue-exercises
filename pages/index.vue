@@ -25,7 +25,7 @@
                     icon
                     slot="activator"
                     @click="callToHuston(true)"
-                    color="info"
+                    color="primary"
                 >
                     <v-icon>live_help</v-icon>
                 </v-btn>
