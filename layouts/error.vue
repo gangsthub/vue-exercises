@@ -19,6 +19,7 @@ export default {
     head() {
         return {
             // <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+            title: 'Error...',
             link: [
                 {
                     rel: 'stylesheet',

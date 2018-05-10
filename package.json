@@ -61,6 +61,7 @@
     "jest-serializer-vue": "^1.0.0",
     "jest-vue-preprocessor": "^1.4.0",
     "jsdom": "^11.10.0",
+    "open-browser-webpack-plugin": "0.0.5",
     "require-extension-hooks": "^0.3.2",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^1.0.0",
