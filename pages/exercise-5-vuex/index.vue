@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <div v-html="hustonHtml"></div>
-        <!-- 🚀 Add the button components -->
+        <!-- 🚀 Nothing to add here -->
     </section>
 </template>
 
@@ -12,10 +12,10 @@ import setHustonText from '~/mixins/setHustonText';
 import callingHuston from '~/mixins/callingHuston';
 
 export default {
-    name: 'Counters',
+    name: 'Hello-world',
     head() {
         return {
-            title: 'Counters',
+            title: 'And now, the extra mile! Mapping vuex\' state and using computed properties',
         };
     },
     data() {

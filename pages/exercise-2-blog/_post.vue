@@ -23,7 +23,7 @@
 import setHustonText from '~/mixins/setHustonText';
 
 export default {
-    name: 'blog-post',
+    name: 'Post',
     head () {
         return {
             title: `Post: ${ this.post.title }`

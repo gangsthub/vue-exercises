@@ -1,15 +1,17 @@
 // hiding this here to leave the page cleaner for the exercises
 // but you dont NEED to put text in Vue or Nuxt like this.
+// You can use Markdown with some plugins
 // Just making use of Javascript to leave cleaner the exercise page
+// There is a better way of doing this, actually, https://github.com/linusborg/portal-vue
+// I'll add it to my ToDo list
 
 export const hustonText =
 
-`Now we are going the extra mile!
+`🎵 Numbers on the Board! 🎵
 <br><br>
-It's a very common example: We are going to build a <b>counter</b>.
-But, let's make it a little bit more difficult (We are going to go step by step):
+It's a very common example: We are going to build a <b>counter</b> component: (We are going to go step by step)
 <br><br>
-<ol class="mb-3">
+<ol class="mb-3 indented-list">
     <li class="mb-3">
         Create a component called <code>CounterButton</code> under the <code>/components</code> directory
     </li>
@@ -33,5 +35,4 @@ But, let's make it a little bit more difficult (We are going to go step by step)
 </ol>
 <p>They should look like this if you used <em>Vuetify</em>'s button components:</p>
 <img class="dashed-border" src="/images/buttons.png">
-
 `;

@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 const store = () => {
     return new Vuex.Store({
         state: {
+            hustonTopImage: 'images/astronaut.svg',
             missionText: '',
             hustonOpen: false,
             soloMissionPages: [],
@@ -26,6 +27,9 @@ const store = () => {
             CALL_TO_HUSTON(state, val) {
                 state.hustonOpen = !!val;
             },
+            EMPTY_SOLO_MISSION_PAGES(state) {
+                state.soloMissionPages = [];
+            },
             ADD_TO_WONT_SHOW_AGAIN_PAGES(state, page) {
                 if (typeof page === 'string' && !state.soloMissionPages.includes(page)) {
                     state.soloMissionPages.push(page);
@@ -38,6 +42,9 @@ const store = () => {
             },
             callToHuston({ commit }, val) {
                 commit('CALL_TO_HUSTON', val);
+            },
+            emptySoloMissionpages({ commit }) {
+                commit('EMPTY_SOLO_MISSION_PAGES');
             },
             addToWontShowAgainPages({ commit }, page) {
                 commit('ADD_TO_WONT_SHOW_AGAIN_PAGES', page);

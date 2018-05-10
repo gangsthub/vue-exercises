@@ -3,7 +3,7 @@
         <v-card class="transparent elevation-0 pt-3">
              <v-card-media
                 contain
-                src="images/astronaut.svg"
+                :src="$store.state.hustonTopImage"
                 height="200px"
              ></v-card-media>
             <v-card-text class="mt-2">
@@ -13,7 +13,10 @@
             </v-card-text>
         </v-card>
         <v-spacer></v-spacer>
-        <dont-show-again></dont-show-again>
+        <dont-show-again
+            class="mt-2 mb-5"
+            v-if="$nuxt.$route.name !== 'index'"
+        ></dont-show-again>
     </div>
 </template>
 

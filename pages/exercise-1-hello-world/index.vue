@@ -2,7 +2,8 @@
     <section class="container">
         <div class="satelite-wrapper prel">
             <!-- For the purpouse of a silly animation I added dragging capabilities to this satelite illustration.
-            You can omit this comment -->
+            You can omit this comment. It was intended to swow an awesome animation hahaha and show Vue's being nice with other libraries
+            -->
             <the-satelite></the-satelite>
         </div>
 
