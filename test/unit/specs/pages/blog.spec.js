@@ -32,7 +32,7 @@ xdescribe('Blog page', () => {
 
     // Example of testing via dom checking
     test('Route /blog exits and render posts', async () => {
-        const window = await nuxt.renderAndGetWindow('http://localhost:3000/blog');
+        const window = await nuxt.renderAndGetWindow('http://localhost:3000/exercise-2-blog');
         expect(window.document.querySelectorAll('.post').length).toBeGreaterThan(0);
     });
 
