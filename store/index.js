@@ -18,7 +18,7 @@ const store = () => {
             },
             soloMissionPages(state) {
                 return state.soloMissionPages;
-            }
+            },
         },
         mutations: {
             SET_HUSTON_TEXT(state, text) {
@@ -34,7 +34,7 @@ const store = () => {
                 if (typeof page === 'string' && !state.soloMissionPages.includes(page)) {
                     state.soloMissionPages.push(page);
                 }
-            }
+            },
         },
         actions: {
             updateHustonText({ commit }, text) {
@@ -48,7 +48,7 @@ const store = () => {
             },
             addToWontShowAgainPages({ commit }, page) {
                 commit('ADD_TO_WONT_SHOW_AGAIN_PAGES', page);
-            }
+            },
         },
     });
 };
