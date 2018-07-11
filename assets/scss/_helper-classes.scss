@@ -14,6 +14,11 @@
     vertical-align: middle;
 }
 
+// flex
+.h100p {
+    height: 100%;
+}
+
 // moar colors
 $MOAR_COLORS: (
     success: #00C853,
@@ -37,6 +42,12 @@ $MOAR_COLORS: (
 .bold {
     font-weight: bold;
 }
+
+// text
+.break {
+    word-break: break-all;
+}
+
 
 // cursors
 .c-p {

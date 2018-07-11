@@ -24,7 +24,7 @@
                         <v-icon v-html="item.icon"></v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                        <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                        <v-list-tile-title v-text="item.title" :title="item.title"></v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
             </v-list>
@@ -33,12 +33,17 @@
             <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn
-                icon
-                @click="callToHuston(true)"
-            >
-                <v-icon>menu</v-icon>
-            </v-btn>
+             <v-tooltip left>
+                 <v-btn
+                    icon
+                    slot="activator"
+                    @click="callToHuston(true)"
+                    color="primary"
+                >
+                    <v-icon>live_help</v-icon>
+                </v-btn>
+                <span>This is Huston</span>
+            </v-tooltip>
         </v-toolbar>
         <v-content>
             <v-container>
@@ -72,7 +77,12 @@ export default {
             clipped: false,
             drawer: true,
             items: [
-                { icon: 'home', title: 'Mission Control (Home)', to: '/' },
+                { icon: 'home',      title: 'Mission Control (Home)',   to: '/' },
+                { icon: 'apps',      title: 'Exercise 1 - Hello world', to: '/exercise-1-hello-world' },
+                { icon: 'list',      title: 'Exercise 2 - Blog',        to: '/exercise-2-blog' },
+                { icon: 'tag_faces', title: 'Exercise 3 - Listing!',    to: '/exercise-3-emojis' },
+                { icon: 'plus_one',  title: 'Exercise 4 - Counters',    to: '/exercise-4-counters' },
+                { icon: 'save_alt',  title: 'Exercise 5 - Vuex',        to: '/exercise-5-vuex' },
             ],
             miniVariant: false,
             right: true,
@@ -85,8 +95,12 @@ export default {
     methods: {
         ...mapActions(['callToHuston']),
         onVisibilityChanged(isVisible) {
-            if (isVisible !== this.hustonOpen) {
-                this.callToHuston(isVisible);
+            if (process.browser) {
+
+                if (isVisible !== this.hustonOpen) {
+                    this.callToHuston(isVisible);
+                }
+
             }
         },
     },
