@@ -4,6 +4,10 @@
 
 # vue-exercises
 
+## Why Nuxt?
+
+[Nuxt](https://nuxtjs.org) is a framework to make universal Vue apps. It comes with a lot of [flavours](https://github.com/nuxt-community/awesome-nuxt) our you can make your own. It will gives us a lot of [features](https://nuxtjs.org/guide#features) by default (that we can also configure) and extend with its plugin system.
+
 
 ## Instructions to get started
 
