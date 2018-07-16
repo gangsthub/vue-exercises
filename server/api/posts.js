@@ -25,37 +25,37 @@ const posts = [
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Christine Darden'
     ),
     new Post(2,
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Dorothy Vaughan'
     ),
     new Post(3,
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Katherine Johnson'
     ),
     new Post(4,
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Mary Jackson'
     ),
     new Post(5,
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Christine Darden'
     ),
     new Post(6,
         getlorem.words(rand(4, 8)),
         getlorem.sentences(rand(1, 2)),
         getlorem.paragraphs(rand(4, 10)),
-        'Paul Melero'
+        'Dorothy Vaughan'
     ),
 ];
 

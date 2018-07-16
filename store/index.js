@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 const store = () => {
     return new Vuex.Store({
         state: {
-            hustonTopImage: 'images/astronaut.svg',
+            hustonTopImage: '/images/astronaut.svg',
             missionText: '',
             hustonOpen: false,
             soloMissionPages: [],

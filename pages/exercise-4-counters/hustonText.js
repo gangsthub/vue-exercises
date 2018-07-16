@@ -20,8 +20,7 @@ It's a very common example: We are going to build a <b>counter</b> component: (W
     </li>
     <li class="mb-3">
         You can use the <code>&lt;v-btn&gt;&lt;/v-btn&gt;</code> from <em>Vuetify</em> to make it look like the
-        <em>Material Design Spec</em> or a simple
-        <code>button</code>.
+        <em>Material Design Spec</em> or a regular <code>button</code>.
     </li>
     <li class="mb-3">
         <code>import</code> it on this page (Exercise 4). And include the button twice in the page!
