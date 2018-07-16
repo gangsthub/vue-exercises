@@ -1,5 +1,6 @@
 <template>
     <div class="w80p pa-4">
+        <back-button></back-button>
         <v-list class="transparent">
             <v-list-tile avatar>
               <v-list-tile-avatar>
@@ -21,6 +22,7 @@
 <script>
 
 import setHustonText from '~/mixins/setHustonText';
+import backButton from '~/mixins/backButton';
 
 export default {
     name: 'Post',
@@ -49,7 +51,7 @@ export default {
                 error({ statusCode: 404, message: 'Post not found' })
             })
     },
-    mixins: [ setHustonText, /* not calling huston here, but setting the text */ ],
+    mixins: [ setHustonText, backButton ],
 }
 </script>
 

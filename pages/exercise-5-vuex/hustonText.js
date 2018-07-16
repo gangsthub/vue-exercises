@@ -38,7 +38,7 @@ There is a list of 5 images at <code>static/images/nasa</code>. They are <b>phys
     >Kase O</a>, hahahaha.</li>
 </ol>
 <br><br>
-Ok, if you want to <b>win</b> the contest, this is your last exercise! 🎉🎉<br><br>
+Ok, if you want to complete the app, this is your last exercise! 🎉🎉<br><br>
 <ul class="indented-list">
   <li class="mb-3">I want you to create an action within Vuex store, that calls a mutation (like a reducer in Redux), that changes
   the state's property <code>hustonTopImage</code> with a given string.</li>

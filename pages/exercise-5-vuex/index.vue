@@ -1,5 +1,6 @@
 <template>
     <section class="container">
+        <back-button></back-button>
         <div v-html="hustonHtml"></div>
         <!-- 🚀 Nothing to add here -->
     </section>
@@ -10,6 +11,7 @@
 import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
 import callingHuston from '~/mixins/callingHuston';
+import backButton from '~/mixins/backButton';
 
 export default {
     name: 'Hello-world',
@@ -23,7 +25,7 @@ export default {
             hustonHtml: hustonText
         }
     },
-    mixins: [ setHustonText, callingHuston ],
+    mixins: [ setHustonText, callingHuston, backButton ],
 };
 </script>
 

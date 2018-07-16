@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="container">
+        <back-button></back-button>
         There's nothing here yet (delete me)
         <!-- 🚀 Insert it here ⬇. And delete that ↖ -->
     </div>
@@ -9,6 +10,7 @@
 import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
 import callingHuston from '~/mixins/callingHuston';
+import backButton from '~/mixins/backButton';
 
 export default {
     name: 'emojis',
@@ -22,6 +24,6 @@ export default {
             hustonHtml: hustonText
         }
     },
-    mixins: [ setHustonText, callingHuston ],
+    mixins: [ setHustonText, callingHuston, backButton ],
 }
 </script>

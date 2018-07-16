@@ -1,5 +1,6 @@
 <template>
-    <v-layout column>
+    <v-layout column class="container">
+        <back-button></back-button>
         <v-flex xs12 sm8 offset-sm2>
             <v-container fluid grid-list-lg>
                 <v-layout row wrap>
@@ -33,7 +34,10 @@
 </template>
 
 <script>
+import backButton from '~/mixins/backButton';
+
 import { hustonText } from './hustonText';
+
 import setHustonText from '~/mixins/setHustonText';
 import callingHuston from '~/mixins/callingHuston';
 
@@ -55,7 +59,7 @@ export default {
             return { posts: data };
         })
     },
-    mixins: [ setHustonText, callingHuston ],
+    mixins: [ setHustonText, callingHuston, backButton ],
 }
 </script>
 

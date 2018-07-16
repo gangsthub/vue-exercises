@@ -1,6 +1,6 @@
 <template>
     <section class="container white">
-        <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image"></div>
+        <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image" class="jumbo-image"></div>
         <div class="pl-3">
             <h3 class="subheading">Repo: <a
                 href="https://github.com/gangsthub/vue-exercises"
@@ -72,6 +72,9 @@ export default {
 </script>
 
 <style scoped>
+.jumbo-image {
+    max-width: 100%;
+}
 .title {
     margin: 30px 0;
 }

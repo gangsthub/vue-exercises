@@ -1,5 +1,6 @@
 <template>
     <section class="container">
+        <back-button></back-button>
         <div class="satelite-wrapper prel">
             <!-- For the purpouse of a silly animation I added dragging capabilities to this satelite illustration.
             You can omit this comment. It was intended to swow an awesome animation hahaha and show Vue's being nice with other libraries
@@ -27,6 +28,7 @@
 
 <script>
 import TheSatelite from '~/components/Satelite.vue';
+import backButton from '~/mixins/backButton';
 
 import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
@@ -52,9 +54,9 @@ export default {
             hustonHtml: hustonText
         }
     },
-    mixins: [ setHustonText, callingHuston ],
+    mixins: [ setHustonText, callingHuston, backButton ],
     components: {
-        TheSatelite
+        TheSatelite,
     }
 };
 </script>
