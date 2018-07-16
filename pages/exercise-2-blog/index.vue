@@ -43,23 +43,23 @@ import callingHuston from '~/mixins/callingHuston';
 
 export default {
     name: 'Blog',
-    head () {
+    head() {
         return {
             title: 'Blog'
-        }
+        };
     },
     data() {
         return {
             posts: [],
             hustonHtml: hustonText
-        }
+        };
     },
-    asyncData ({ app }) {
+    asyncData({ app }) {
         return app.$axios.$get('/api/posts').then((data) => {
             return { posts: data };
-        })
+        });
     },
     mixins: [ setHustonText, callingHuston, backButton ],
-}
+};
 </script>
 

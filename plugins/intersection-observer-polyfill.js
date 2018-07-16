@@ -14,29 +14,26 @@
  * limitations under the License.
  */
 
-(function (window, document) {
+(function(window, document) {
     'use strict';
-
 
     // Exits early if all IntersectionObserver and IntersectionObserverEntry
     // features are natively supported.
     if ('IntersectionObserver' in window &&
         'IntersectionObserverEntry' in window &&
         'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
-
         // Minimal polyfill for Edge 15's lack of `isIntersecting`
         // See: https://github.com/w3c/IntersectionObserver/issues/211
         if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
             Object.defineProperty(window.IntersectionObserverEntry.prototype,
                 'isIntersecting', {
-                    get: function () {
+                    get: function() {
                         return this.intersectionRatio > 0;
                     }
                 });
         }
         return;
     }
-
 
     /**
      * An IntersectionObserver registry. This registry exists to hold a strong
@@ -45,7 +42,6 @@
      * garbage collected.
      */
     var registry = [];
-
 
     /**
      * Creates the global IntersectionObserverEntry constructor.
@@ -76,7 +72,6 @@
         }
     }
 
-
     /**
      * Creates the global IntersectionObserver constructor.
      * https://w3c.github.io/IntersectionObserver/#intersection-observer-interface
@@ -87,10 +82,9 @@
      * @constructor
      */
     function IntersectionObserver(callback, opt_options) {
-
         var options = opt_options || {};
 
-        if (typeof callback != 'function') {
+        if (typeof callback !== 'function') {
             throw new Error('callback must be a function');
         }
 
@@ -111,18 +105,16 @@
         // Public properties.
         this.thresholds = this._initThresholds(options.threshold);
         this.root = options.root || null;
-        this.rootMargin = this._rootMarginValues.map(function (margin) {
+        this.rootMargin = this._rootMarginValues.map(function(margin) {
             return margin.value + margin.unit;
         }).join(' ');
     }
-
 
     /**
      * The minimum interval within which the document will be checked for
      * intersection changes.
      */
     IntersectionObserver.prototype.THROTTLE_TIMEOUT = 100;
-
 
     /**
      * The frequency in which the polyfill polls for intersection changes.
@@ -131,17 +123,16 @@
      */
     IntersectionObserver.prototype.POLL_INTERVAL = null;
 
-
     /**
      * Starts observing a target element for intersection changes based on
      * the thresholds values.
      * @param {Element} target The DOM element to observe.
      */
-    IntersectionObserver.prototype.observe = function (target) {
+    IntersectionObserver.prototype.observe = function(target) {
         // If the target is already being observed, do nothing.
-        if (this._observationTargets.some(function (item) {
-                return item.element == target;
-            })) {
+        if (this._observationTargets.some(function(item) {
+            return item.element == target;
+        })) {
             return;
         }
 
@@ -158,15 +149,13 @@
         this._checkForIntersections();
     };
 
-
     /**
      * Stops observing a target element for intersection changes.
      * @param {Element} target The DOM element to observe.
      */
-    IntersectionObserver.prototype.unobserve = function (target) {
+    IntersectionObserver.prototype.unobserve = function(target) {
         this._observationTargets =
-            this._observationTargets.filter(function (item) {
-
+            this._observationTargets.filter(function(item) {
                 return item.element != target;
             });
         if (!this._observationTargets.length) {
@@ -175,16 +164,14 @@
         }
     };
 
-
     /**
      * Stops observing all target elements for intersection changes.
      */
-    IntersectionObserver.prototype.disconnect = function () {
+    IntersectionObserver.prototype.disconnect = function() {
         this._observationTargets = [];
         this._unmonitorIntersections();
         this._unregisterInstance();
     };
-
 
     /**
      * Returns any queue entries that have not yet been reported to the
@@ -192,12 +179,11 @@
      * callback to obtain the absolute most up-to-date intersection information.
      * @return {Array} The currently queued entries.
      */
-    IntersectionObserver.prototype.takeRecords = function () {
+    IntersectionObserver.prototype.takeRecords = function() {
         var records = this._queuedEntries.slice();
         this._queuedEntries = [];
         return records;
     };
-
 
     /**
      * Accepts the threshold value from the user configuration object and
@@ -208,18 +194,17 @@
      *     a list of threshold values, defaulting to [0].
      * @return {Array} A sorted list of unique and valid threshold values.
      */
-    IntersectionObserver.prototype._initThresholds = function (opt_threshold) {
+    IntersectionObserver.prototype._initThresholds = function(opt_threshold) {
         var threshold = opt_threshold || [0];
         if (!Array.isArray(threshold)) threshold = [threshold];
 
-        return threshold.sort().filter(function (t, i, a) {
-            if (typeof t != 'number' || isNaN(t) || t < 0 || t > 1) {
+        return threshold.sort().filter(function(t, i, a) {
+            if (typeof t !== 'number' || isNaN(t) || t < 0 || t > 1) {
                 throw new Error('threshold must be a number between 0 and 1 inclusively');
             }
             return t !== a[i - 1];
         });
     };
-
 
     /**
      * Accepts the rootMargin value from the user configuration object
@@ -232,9 +217,9 @@
      * @return {Array<Object>} An array of margin objects with the keys
      *     value and unit.
      */
-    IntersectionObserver.prototype._parseRootMargin = function (opt_rootMargin) {
+    IntersectionObserver.prototype._parseRootMargin = function(opt_rootMargin) {
         var marginString = opt_rootMargin || '0px';
-        var margins = marginString.split(/\s+/).map(function (margin) {
+        var margins = marginString.split(/\s+/).map(function(margin) {
             var parts = /^(-?\d*\.?\d+)(px|%)$/.exec(margin);
             if (!parts) {
                 throw new Error('rootMargin must be specified in pixels or percent');
@@ -253,13 +238,12 @@
         return margins;
     };
 
-
     /**
      * Starts polling for intersection changes if the polling is not already
      * happening, and if the page's visibilty state is visible.
      * @private
      */
-    IntersectionObserver.prototype._monitorIntersections = function () {
+    IntersectionObserver.prototype._monitorIntersections = function() {
         if (!this._monitoringIntersections) {
             this._monitoringIntersections = true;
 
@@ -285,12 +269,11 @@
         }
     };
 
-
     /**
      * Stops polling for intersection changes.
      * @private
      */
-    IntersectionObserver.prototype._unmonitorIntersections = function () {
+    IntersectionObserver.prototype._unmonitorIntersections = function() {
         if (this._monitoringIntersections) {
             this._monitoringIntersections = false;
 
@@ -307,18 +290,17 @@
         }
     };
 
-
     /**
      * Scans each observation target for intersection changes and adds them
      * to the internal entries queue. If new entries are found, it
      * schedules the callback to be invoked.
      * @private
      */
-    IntersectionObserver.prototype._checkForIntersections = function () {
+    IntersectionObserver.prototype._checkForIntersections = function() {
         var rootIsInDom = this._rootIsInDom();
         var rootRect = rootIsInDom ? this._getRootRect() : getEmptyRect();
 
-        this._observationTargets.forEach(function (item) {
+        this._observationTargets.forEach(function(item) {
             var target = item.element;
             var targetRect = getBoundingClientRect(target);
             var rootContainsTarget = this._rootContainsTarget(target);
@@ -357,7 +339,6 @@
         }
     };
 
-
     /**
      * Accepts a target and root rect computes the intersection between then
      * following the algorithm in the spec.
@@ -371,8 +352,7 @@
      * @private
      */
     IntersectionObserver.prototype._computeTargetAndRootIntersection =
-        function (target, rootRect) {
-
+        function(target, rootRect) {
             // If the element isn't displayed, an intersection can't happen.
             if (window.getComputedStyle(target).display == 'none') return;
 
@@ -383,8 +363,8 @@
 
             while (!atRoot) {
                 var parentRect = null;
-                var parentComputedStyle = parent.nodeType == 1 ?
-                    window.getComputedStyle(parent) : {};
+                var parentComputedStyle = parent.nodeType == 1
+                    ? window.getComputedStyle(parent) : {};
 
                 // If the parent isn't displayed, an intersection can't happen.
                 if (parentComputedStyle.display == 'none') return;
@@ -416,13 +396,12 @@
             return intersectionRect;
         };
 
-
     /**
      * Returns the root rect after being expanded by the rootMargin value.
      * @return {Object} The expanded root rect.
      * @private
      */
-    IntersectionObserver.prototype._getRootRect = function () {
+    IntersectionObserver.prototype._getRootRect = function() {
         var rootRect;
         if (this.root) {
             rootRect = getBoundingClientRect(this.root);
@@ -442,17 +421,16 @@
         return this._expandRectByRootMargin(rootRect);
     };
 
-
     /**
      * Accepts a rect and expands it by the rootMargin value.
      * @param {Object} rect The rect object to expand.
      * @return {Object} The expanded rect.
      * @private
      */
-    IntersectionObserver.prototype._expandRectByRootMargin = function (rect) {
-        var margins = this._rootMarginValues.map(function (margin, i) {
-            return margin.unit == 'px' ? margin.value :
-                margin.value * (i % 2 ? rect.width : rect.height) / 100;
+    IntersectionObserver.prototype._expandRectByRootMargin = function(rect) {
+        var margins = this._rootMarginValues.map(function(margin, i) {
+            return margin.unit == 'px' ? margin.value
+                : margin.value * (i % 2 ? rect.width : rect.height) / 100;
         });
         var newRect = {
             top: rect.top - margins[0],
@@ -466,7 +444,6 @@
         return newRect;
     };
 
-
     /**
      * Accepts an old and new entry and returns true if at least one of the
      * threshold values has been crossed.
@@ -478,14 +455,13 @@
      * @private
      */
     IntersectionObserver.prototype._hasCrossedThreshold =
-        function (oldEntry, newEntry) {
-
+        function(oldEntry, newEntry) {
             // To make comparing easier, an entry that has a ratio of 0
             // but does not actually intersect is given a value of -1
-            var oldRatio = oldEntry && oldEntry.isIntersecting ?
-                oldEntry.intersectionRatio || 0 : -1;
-            var newRatio = newEntry.isIntersecting ?
-                newEntry.intersectionRatio || 0 : -1;
+            var oldRatio = oldEntry && oldEntry.isIntersecting
+                ? oldEntry.intersectionRatio || 0 : -1;
+            var newRatio = newEntry.isIntersecting
+                ? newEntry.intersectionRatio || 0 : -1;
 
             // Ignore unchanged ratios
             if (oldRatio === newRatio) return;
@@ -502,16 +478,14 @@
             }
         };
 
-
     /**
      * Returns whether or not the root element is an element and is in the DOM.
      * @return {boolean} True if the root element is an element and is in the DOM.
      * @private
      */
-    IntersectionObserver.prototype._rootIsInDom = function () {
+    IntersectionObserver.prototype._rootIsInDom = function() {
         return !this.root || containsDeep(document, this.root);
     };
-
 
     /**
      * Returns whether or not the target element is a child of root.
@@ -519,32 +493,29 @@
      * @return {boolean} True if the target element is a child of root.
      * @private
      */
-    IntersectionObserver.prototype._rootContainsTarget = function (target) {
+    IntersectionObserver.prototype._rootContainsTarget = function(target) {
         return containsDeep(this.root || document, target);
     };
-
 
     /**
      * Adds the instance to the global IntersectionObserver registry if it isn't
      * already present.
      * @private
      */
-    IntersectionObserver.prototype._registerInstance = function () {
+    IntersectionObserver.prototype._registerInstance = function() {
         if (registry.indexOf(this) < 0) {
             registry.push(this);
         }
     };
 
-
     /**
      * Removes the instance from the global IntersectionObserver registry.
      * @private
      */
-    IntersectionObserver.prototype._unregisterInstance = function () {
+    IntersectionObserver.prototype._unregisterInstance = function() {
         var index = registry.indexOf(this);
         if (index != -1) registry.splice(index, 1);
     };
-
 
     /**
      * Returns the result of the performance.now() method or null in browsers
@@ -554,7 +525,6 @@
     function now() {
         return window.performance && performance.now && performance.now();
     }
-
 
     /**
      * Throttles a function and delays its executiong, so it's only called at most
@@ -566,16 +536,15 @@
      */
     function throttle(fn, timeout) {
         var timer = null;
-        return function () {
+        return function() {
             if (!timer) {
-                timer = setTimeout(function () {
+                timer = setTimeout(function() {
                     fn();
                     timer = null;
                 }, timeout);
             }
         };
     }
-
 
     /**
      * Adds an event handler to a DOM node ensuring cross-browser compatibility.
@@ -586,13 +555,12 @@
      *     phase. Note: this only works in modern browsers.
      */
     function addEvent(node, event, fn, opt_useCapture) {
-        if (typeof node.addEventListener == 'function') {
+        if (typeof node.addEventListener === 'function') {
             node.addEventListener(event, fn, opt_useCapture || false);
-        } else if (typeof node.attachEvent == 'function') {
+        } else if (typeof node.attachEvent === 'function') {
             node.attachEvent('on' + event, fn);
         }
     }
-
 
     /**
      * Removes a previously added event handler from a DOM node.
@@ -603,13 +571,12 @@
      *     flag set to true, it should be set to true here in order to remove it.
      */
     function removeEvent(node, event, fn, opt_useCapture) {
-        if (typeof node.removeEventListener == 'function') {
+        if (typeof node.removeEventListener === 'function') {
             node.removeEventListener(event, fn, opt_useCapture || false);
-        } else if (typeof node.detatchEvent == 'function') {
+        } else if (typeof node.detatchEvent === 'function') {
             node.detatchEvent('on' + event, fn);
         }
     }
-
 
     /**
      * Returns the intersection between two rect objects.
@@ -635,7 +602,6 @@
             height: height
         };
     }
-
 
     /**
      * Shims the native getBoundingClientRect for compatibility with older IE.
@@ -667,7 +633,6 @@
         }
         return rect;
     }
-
 
     /**
      * Returns an empty rect object. An empty rect is returned when an element
@@ -702,7 +667,6 @@
         return false;
     }
 
-
     /**
      * Gets the parent node of an element or its host element if the parent node
      * is a shadow root.
@@ -719,9 +683,7 @@
         return parent;
     }
 
-
     // Exposes the constructors globally.
     window.IntersectionObserver = IntersectionObserver;
     window.IntersectionObserverEntry = IntersectionObserverEntry;
-
 }(window, document));

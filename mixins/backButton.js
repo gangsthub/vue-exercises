@@ -1,6 +1,6 @@
-import BackButton from '~/components/BackButton.vue';
+
 export default {
     components: {
-        BackButton
+        BackButton: () => import('~/components/BackButton.vue') // lazy loading code splitting!
     }
 };

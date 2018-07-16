@@ -28,7 +28,7 @@ export default {
                     hid: 'Montserrrat'
                 }
             ]
-        }
+        };
     },
     props: ['error']
 };

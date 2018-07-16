@@ -1,6 +1,14 @@
 {
-    "presets": [
-        "env",
-        "vue-app"
-    ]
+    "env": {
+        "presets": [
+            "@babel/preset-env"
+        ],
+        "test": {
+            "presets":[
+                "env",
+                "jest"
+            ],
+            "plugins": ["dynamic-import-node"]
+          }
+    }
 }
