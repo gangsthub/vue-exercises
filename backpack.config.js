@@ -5,7 +5,7 @@ module.exports = {
         config.entry.main = './server/index.js';
         config.plugins.push(
             new OpenBrowserPlugin({
-                url: `http://localhost:${ process.env.PORT || 3000 }`,
+                url: `http://localhost:${process.env.PORT || 3000}`,
                 delay: 20000
             })
         );

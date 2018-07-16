@@ -62,7 +62,7 @@ export default {
     data() {
         return {
             hustonHtml: 'Nothing to see here, go to the first exercise! :)'
-        }
+        };
     },
     mixins: [ setHustonText ],
     methods: {

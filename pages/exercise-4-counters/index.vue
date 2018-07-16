@@ -23,7 +23,7 @@ export default {
     data() {
         return {
             hustonHtml: hustonText
-        }
+        };
     },
     mixins: [ setHustonText, callingHuston, backButton ],
 };

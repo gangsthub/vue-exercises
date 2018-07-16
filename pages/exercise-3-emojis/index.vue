@@ -14,16 +14,16 @@ import backButton from '~/mixins/backButton';
 
 export default {
     name: 'emojis',
-    head () {
+    head() {
         return {
             title: 'This are my emojis'
-        }
+        };
     },
     data() {
         return {
             hustonHtml: hustonText
-        }
+        };
     },
     mixins: [ setHustonText, callingHuston, backButton ],
-}
+};
 </script>

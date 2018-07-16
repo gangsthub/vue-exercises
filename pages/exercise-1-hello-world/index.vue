@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import TheSatelite from '~/components/Satelite.vue';
 import backButton from '~/mixins/backButton';
 
 import { hustonText } from './hustonText';
@@ -38,7 +37,7 @@ export default {
     name: 'Hello-world',
     head() {
         return {
-            title: `${ this.title }`,
+            title: `${this.title}`,
             meta: [
                 {
                     name: 'description',
@@ -52,11 +51,11 @@ export default {
         return {
             title: 'Hello, ...world?',
             hustonHtml: hustonText
-        }
+        };
     },
     mixins: [ setHustonText, callingHuston, backButton ],
     components: {
-        TheSatelite,
+        TheSatelite: () => import('~/components/Satelite.vue'),
     }
 };
 </script>

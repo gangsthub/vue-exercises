@@ -23,15 +23,13 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import DontShowAgain from '~/components/DontShowAgain';
-
 export default {
     computed: {
         ...mapGetters(['hustonText'])
     },
     components: {
-        DontShowAgain
+        DontShowAgain: () => import('~/components/DontShowAgain')
     }
-}
+};
 </script>
 
