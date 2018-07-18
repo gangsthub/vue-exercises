@@ -49,9 +49,6 @@ module.exports = {
             'babel-polyfill',
             'vuetify'
         ],
-        /*
-        ** Run ESLINT on save
-        */
         extractCSS: true,
         babel: {
             // https://github.com/nuxt/nuxt.js/issues/3199

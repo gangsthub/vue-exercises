@@ -4,7 +4,7 @@ import {
 } from '@vue/test-utils';
 import Vuex from 'vuex';
 import Vuetify from 'vuetify';
-import Home from '~/pages/index.vue';
+import Blog from '~/pages/exercise-2-blog/index.vue';
 import store from '../../../fixtures/store';
 
 describe('Home /', () => {
@@ -16,8 +16,8 @@ describe('Home /', () => {
         localVue.use(Vuex);
     });
 
-    it('renders home page', () => {
-        const wrapper = mount(Home, {
+    it('renders Blog page', () => {
+        const wrapper = mount(Blog, {
             localVue: localVue,
             store: store(),
             stubs: ['nuxt-link']
