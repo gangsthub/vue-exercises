@@ -32,6 +32,6 @@ export default {
     components: {
         DontShowAgain
     }
-}
+};
 </script>
 

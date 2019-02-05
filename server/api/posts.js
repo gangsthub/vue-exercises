@@ -60,12 +60,12 @@ const posts = [
 ];
 
 /* GET posts listing. */
-router.get('/posts', function(req, res, next) {
+router.get('/posts', function (req, res, next) {
     return res.status(200).json(posts);
 });
 
 /* GET user by ID. */
-router.get('/posts/:id', function(req, res, next) {
+router.get('/posts/:id', function (req, res, next) {
     const id = parseInt(req.params.id);
     if (id >= 0 && id < posts.length + 1) {
         return res.status(200).json(posts[id - 1]);

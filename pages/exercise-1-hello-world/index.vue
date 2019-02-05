@@ -36,7 +36,7 @@ export default {
     name: 'Hello-world',
     head() {
         return {
-            title: `${ this.title }`,
+            title: `${this.title}`,
             meta: [
                 {
                     name: 'description',
@@ -50,7 +50,7 @@ export default {
         return {
             title: 'Hello, ...world?',
             hustonHtml: hustonText
-        }
+        };
     },
     mixins: [ setHustonText, callingHuston ],
     components: {

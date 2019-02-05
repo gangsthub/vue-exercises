@@ -22,7 +22,6 @@ module.exports = {
     transformIgnorePatterns: [
         '/node_modules/(?!(@storybook/.*\\.vue$))',
     ],
-    coverageDirectory: '<rootDir>/test/unit/coverage',
     collectCoverageFrom: [
         'components/**/*.{js,ts,vue}',
         'layouts/**/*.{js,ts,vue}',

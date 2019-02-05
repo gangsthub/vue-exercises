@@ -25,8 +25,7 @@ const emojis = [
     new Emoji(9, '😆'),
     new Emoji(10, '😉'),
     new Emoji(11, '😊'),
-    new Emoji(11, '😋'),
-    new Emoji(12, '😎'),
+    new Emoji(12, '😋'),
     new Emoji(13, '😍'),
     new Emoji(14, '😘'),
     new Emoji(16, '😗'),
@@ -43,10 +42,11 @@ const emojis = [
     new Emoji(28, '😶'),
     new Emoji(29, '🙄'),
     new Emoji(30, '😏'),
+    new Emoji(31, '😎'),
 ];
 
 /* GET emojis listing. */
-router.get('/emojis', function(_req, res) {
+router.get('/emojis', function (_req, res) {
     return res.status(200).json(emojis);
 });
 

@@ -209,25 +209,25 @@ export default {
             const satelliteXY = value({ x: 0, y: 0 }, divStyler.set);
 
             listen(satellite, 'mousedown touchstart')
-            .start((e) => {
-                e.preventDefault();
-                pointer(satelliteXY.get()).start(satelliteXY);
-            });
+                .start((e) => {
+                    e.preventDefault();
+                    pointer(satelliteXY.get()).start(satelliteXY);
+                });
 
             listen(document, 'mouseup touchend')
-            .start(() => {
-                spring({
-                from: satelliteXY.get(),
-                velocity: satelliteXY.getVelocity(),
-                to: { x: 0, y: 0 },
-                stiffness: 200,
-                // mass: 1,
-                // damping: 10
-                }).start(satelliteXY);
-            });
+                .start(() => {
+                    spring({
+                        from: satelliteXY.get(),
+                        velocity: satelliteXY.getVelocity(),
+                        to: { x: 0, y: 0 },
+                        stiffness: 200,
+                        // mass: 1,
+                        // damping: 10
+                    }).start(satelliteXY);
+                });
         }
     }
-}
+};
 </script>
 
 <style scoped>

@@ -24,10 +24,10 @@ import setHustonText from '~/mixins/setHustonText';
 
 export default {
     name: 'Post',
-    head () {
+    head() {
         return {
-            title: `Post: ${ this.post.title }`
-        }
+            title: `Post: ${this.post.title}`
+        };
     },
     data() {
         return {
@@ -38,19 +38,19 @@ export default {
                 author: '',
             },
             hustonHtml: 'Nothing here, you can go to the next exercise! 😊'
-        }
+        };
     },
-    asyncData ({ params, error, app }) {
+    asyncData({ params, error, app }) {
         return app.$axios.$get('/api/posts/' + params.post)
             .then((res) => {
-                return { post: res }
+                return { post: res };
             })
             .catch((e) => {
-                error({ statusCode: 404, message: 'Post not found' })
-            })
+                error({ statusCode: 404, message: 'Post not found' });
+            });
     },
     mixins: [ setHustonText, /* not calling huston here, but setting the text */ ],
-}
+};
 </script>
 
 <style scoped>

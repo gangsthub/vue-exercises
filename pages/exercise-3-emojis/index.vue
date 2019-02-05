@@ -12,16 +12,16 @@ import callingHuston from '~/mixins/callingHuston';
 
 export default {
     name: 'emojis',
-    head () {
+    head() {
         return {
             title: 'This are my emojis'
-        }
+        };
     },
     data() {
         return {
             hustonHtml: hustonText
-        }
+        };
     },
     mixins: [ setHustonText, callingHuston ],
-}
+};
 </script>
