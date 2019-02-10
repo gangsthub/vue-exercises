@@ -5,8 +5,9 @@ module.exports = {
     browser: true,
     serviceworker: true,
     node: true,
+    jest: true,
   },
-  extends: ['standard'],
+  extends: 'standard',
   // required to lint *.vue files
   plugins: [
     'html'
@@ -27,6 +28,7 @@ module.exports = {
     "space-before-function-paren": ["error", {
       "asyncArrow": "always",
       "named": "never",
+      "anonymous": "never"
     }],
     "no-debugger": "error",
   },

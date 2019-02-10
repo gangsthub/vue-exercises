@@ -1,6 +1,6 @@
 <template>
     <section class="container white">
-        <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image"></div>
+        <div class="mb-3"><img src="images/cover.jpg" alt="Jumbo image" class="jumbo-image"></div>
         <div class="pl-3">
             <h3 class="subheading">Repo: <a
                 href="https://github.com/gangsthub/vue-exercises"
@@ -9,18 +9,8 @@
             >
                 https://github.com/gangsthub/vue-exercises
             </a></h3>
-            <p class="subheading mt-4">
-                1️⃣ Go to the first exercise:
-                <nuxt-link
-                    tag="span"
-                    class="ibm subheading c-p primary--text"
-                    :to="{
-                        path: `/exercise-1-hello-world`
-                    }"
-                >/exercise-1-hello-world</nuxt-link>
-            </p>
-            <p class="subheading">
-                2️⃣ Remember that you have the "help button"
+            <p class="subheading  mt-4">
+                1️⃣ Remember that you have the "help button"
                 <v-btn
                     icon
                     slot="activator"
@@ -32,7 +22,17 @@
                 available on the
                 top right corner for every exercise.
             </p>
-            <p class="subheading">
+            <p class="subheading mt-4">
+                2️⃣ Go to the first exercise:
+                <nuxt-link
+                    tag="span"
+                    class="ibm subheading c-p primary--text"
+                    :to="{
+                        path: `/exercise-1-hello-world`
+                    }"
+                >/exercise-1-hello-world</nuxt-link>
+            </p>
+            <p class="subheading mt-4">
                 ️3️⃣ Enjoy!
             </p>
         </div>
@@ -72,6 +72,9 @@ export default {
 </script>
 
 <style scoped>
+.jumbo-image {
+    max-width: 100%;
+}
 .title {
     margin: 30px 0;
 }

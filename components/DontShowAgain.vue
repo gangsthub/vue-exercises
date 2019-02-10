@@ -20,6 +20,7 @@
 import isPageExcluded from '~/mixins/isPageExcluded';
 
 export default {
+    name: 'DontShowAgain',
     methods: {
         dontShowAgain() {
             this.$store.dispatch('addToWontShowAgainPages', this.$nuxt.$route.name);
