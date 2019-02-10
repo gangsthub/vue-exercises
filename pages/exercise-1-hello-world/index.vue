@@ -19,8 +19,7 @@
             <span>works!</span>
             <p class="about-coding-style"> Another thing: I have respected 120 chars per line.
                 You can add the rule in your editor too 😋.</p>
-            <p><v-icon class="translucent success--text headline">check</v-icon></p> -->
-
+            <p><v-icon class="translucent success--text">check</v-icon></p> -->
 
         </div>
     </section>

@@ -6,7 +6,10 @@
         >
             Dont show again
         </v-btn>
-        <span v-else class="grey--text">Won't be shown again by default&nbsp;</span>
+        <span
+            v-if="thisPageIsExluded || $nuxt.$router.name === 'index'"
+            class="grey--text"
+        >Won't be shown again by default&nbsp;</span>
         <span :class="{
             'grey--text': thisPageIsExluded
         }">on this page</span>

@@ -9,7 +9,7 @@
         >
             <v-list>
                 <v-list-tile>
-                    <v-list-tile-action @click.stop="miniVariant = !miniVariant">
+                    <v-list-tile-action @click.stop="miniVariant = !miniVariant" class="c-p">
                         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
                     </v-list-tile-action>
                 </v-list-tile>
@@ -79,10 +79,7 @@ export default {
             items: [
                 { icon: 'home', title: 'Mission Control (Home)', to: '/' },
                 { icon: 'apps', title: 'Exercise 1 - Hello world', to: '/exercise-1-hello-world' },
-                { icon: 'list', title: 'Exercise 2 - Blog', to: '/exercise-2-blog' },
-                { icon: 'tag_faces', title: 'Exercise 3 - Listing!', to: '/exercise-3-emojis' },
-                { icon: 'plus_one', title: 'Exercise 4 - Counters', to: '/exercise-4-counters' },
-                { icon: 'save_alt', title: 'Exercise 5 - Vuex', to: '/exercise-5-vuex' },
+                { icon: 'plus_one', title: 'Exercise 2 - Counters', to: '/exercise-2-counters' },
             ],
             miniVariant: false,
             right: true,

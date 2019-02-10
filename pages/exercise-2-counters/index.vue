@@ -1,22 +1,25 @@
 <template>
-    <div class="container">
+    <section class="container">
         <back-button></back-button>
-        There's nothing here yet (delete me)
-        <!-- 🚀 Insert it here ⬇. And delete that ↖ -->
-    </div>
+        <div v-html="hustonHtml"></div>
+
+        <!-- 🚀 Add the button components here ⬇ -->
+
+    </section>
 </template>
 
 <script>
+
 import { hustonText } from './hustonText';
 import setHustonText from '~/mixins/setHustonText';
 import callingHuston from '~/mixins/callingHuston';
 import backButton from '~/mixins/backButton';
 
 export default {
-    name: 'emojis',
+    name: 'Counters',
     head() {
         return {
-            title: 'This are my emojis'
+            title: 'Counters',
         };
     },
     data() {
@@ -27,3 +30,14 @@ export default {
     mixins: [ setHustonText, callingHuston, backButton ],
 };
 </script>
+
+<style scoped>
+.title {
+    margin: 30px 0;
+}
+.satelite-wrapper {
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+}
+</style>

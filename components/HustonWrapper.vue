@@ -1,11 +1,11 @@
 <template>
     <div class="layout column h100p">
         <v-card class="transparent elevation-0 pt-3">
-             <v-card-media
+             <v-img
                 contain
                 :src="$store.state.hustonTopImage"
                 height="200px"
-             ></v-card-media>
+             ></v-img>
             <v-card-text class="mt-2">
                 <h2 class="mb-1 grey--text">Hi, this is Huston!</h2>
                 <hr class="mb-4 grey--text">
