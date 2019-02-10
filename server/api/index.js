@@ -9,4 +9,8 @@ const router = Router();
 router.use(posts);
 router.use(emojis);
 
+router.get('/', function (_req, res) {
+  return res.status(200).send('It works')
+});
+
 export default router;

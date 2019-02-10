@@ -1,7 +1,9 @@
 <template>
     <section class="container">
         <div v-html="hustonHtml"></div>
-        <!-- 🚀 Add the button components -->
+
+        <!-- 🚀 Add the button components here ⬇ -->
+
     </section>
 </template>
 

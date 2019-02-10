@@ -6,3 +6,8 @@
     border: 2px dashed rgba(0,0,0,.4);
     border-radius: 6px;
 }
+
+.v-navigation-drawer.v-navigation-drawer--close.v-navigation-drawer--right {
+    transform: translateX(110%) !important;
+    transform: translateX(calc(100% + 11px)) !important;
+}

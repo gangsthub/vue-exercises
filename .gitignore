@@ -16,3 +16,4 @@ dist
 
 # Backpack build
 build
+/static/images/nasa

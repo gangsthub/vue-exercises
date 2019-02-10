@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .A0 {
     position: absolute;
     top: 0;
@@ -43,7 +43,7 @@ export default {
     left: 0;
 }
 .bg {
-    background-image: url('~/images/retro-bg.png');
+    background-image: url('~static/images/retro-bg.png');
     background-position: 20% center;
     background-size: cover;
     z-index: 0;
@@ -57,21 +57,19 @@ export default {
     min-height: 60vh;
 }
 .title {
-    font-size: 5rem!important;
+    font-size: 5rem !important;
 }
 .button {
     display: block;
     margin-top: 50px;
 }
 .shadow {
-    $pink: #fb9df4;
-    text-shadow: 1px 3px 4px rgba($pink, .3),
-                 0 0 6px rgba($pink, .2),
-                 0 0 10px rgba($pink, 1),
-                 0 0 15px rgba($pink, .2),
-                 0 0 30px rgba(darken($pink, 20), .6),
-                 0 0 35px rgba($pink, .5),
-                 0 0 40px rgba(darken(desaturate($pink, 20), 40), .7)
-                 ;
+  text-shadow: 1px 3px 4px rgba(251, 157, 244, 0.3),
+                0 0 6px rgba(251, 157, 244, 0.2),
+                0 0 10px #fb9df4,
+                0 0 15px rgba(251, 157, 244, 0.2),
+                0 0 30px rgba(247, 59, 233, 0.6),
+                0 0 35px rgba(251, 157, 244, 0.5),
+                0 0 40px rgba(176, 28, 165, 0.7);
 }
 </style>

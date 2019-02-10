@@ -1,11 +1,4 @@
-const nodeExternals = require('webpack-node-externals');
-const webpack = require('webpack');
-
-// <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-// <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-// <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-// <link rel="manifest" href="/site.webmanifest">
-// <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
     /*
@@ -41,64 +34,20 @@ module.exports = {
         { src: '~/assets/stylus/app.styl', lang: 'styl' },
         { src: '~/assets/scss/main.scss', lang: 'scss' },
     ],
+    /**
+     * Is Dev
+    */
+    dev: process.env.NODE_ENV === 'production',
     /*
     ** Add axios globally
     */
     build: {
-        vendor: [
-            'babel-polyfill',
-            'vuetify'
-        ],
+        transpile: ['vuetify/lib'],
+        plugins: [new VuetifyLoaderPlugin()],
         /*
         ** Run ESLINT on save
         */
         extractCSS: true,
-        babel: {
-            // https://github.com/nuxt/nuxt.js/issues/3199
-            presets() {
-                if (process.server) return null; // Use default
-                return [
-                    ['vue-app', {
-                        targets: {
-                            chrome: 40,
-                            edge: 9,
-                            firefox: 40,
-                            ie: 9,
-                            safari: 7
-                        }
-                    }]
-                ];
-            }
-        },
-        extend(config) {
-            // const alias = config.resolve.alias = config.resolve.alias || {};
-            // alias['three-extras'] = path.join(__dirname, 'node_modules/three/examples/js/');
-            if (process.server) {
-                config.externals = [
-                    nodeExternals({
-                        whitelist: [/^vuetify/]
-                    })
-                ];
-            }
-            // Run ESLINT on save
-            if (process.client) {
-                config.module.rules.push({
-                    enforce: 'pre',
-                    test: /\.(js|vue)$/,
-                    loader: 'eslint-loader',
-                    exclude: /(node_modules)/,
-                });
-
-                // TODO: webpackHotUpdate is not defined: https://github.com/webpack/webpack/issues/6693
-                config.hotMiddleware = {
-                    ...config.hotMiddleware,
-                    plugins: [
-                        ...config.hotMiddleware.plugins,
-                        new webpack.HotModuleReplacementPlugin(),
-                    ]
-                };
-            }
-        }
     },
     plugins: [
         '~/plugins/vuetify.js', // can't have the no-ssr, sorry
@@ -111,10 +60,4 @@ module.exports = {
             ssr: false
         }
     ],
-    modules: [
-        '@nuxtjs/axios',
-    ],
-    axios: {
-        baseURL: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
-    },
 };
